@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from .views import CurrencyRateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.home),
-    path('currencyRate/', views.getExchangeRates)
+    path('currencyRate/', views.getExchangeRates),
+    path('currencyRateView/', CurrencyRateView.as_view(), name= "rate")
 ]
  
