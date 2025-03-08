@@ -29,7 +29,8 @@ function App() {
 
   return (
     <>
-      <h1>Placeholder yall hehe</h1>
+    <div className='overlay'>
+      <h1>Convert from USD to: </h1>
       <Form>
           <Input 
           type='select'
@@ -39,10 +40,9 @@ function App() {
             <option>3</option>
             <option>4</option>
           </Input>
-
       </Form>
-
-
+      <Button>Convert</Button>
+    </div>
     </>
   )
 }

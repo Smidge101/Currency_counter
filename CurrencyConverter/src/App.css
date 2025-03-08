@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+body {
+  background-color: thistle;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -41,6 +45,18 @@
   color: #888;
 }
 
-.navBar {
-  background-color: bisque;
+.overlay {
+  border-radius: 20px;
+  width: 1000px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 100px; 
+  gap: 100px;
 }
+
+
+
