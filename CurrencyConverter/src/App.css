@@ -22,14 +22,6 @@ body {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -56,6 +48,23 @@ body {
   background-color: white;
   padding: 0 100px; 
   gap: 100px;
+}
+
+.prompt {
+  font-size: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+  .overlay {
+    width: 400px;
+    padding: 0 50px;
+
+  }
+
+  .prompt {
+    font-size: 40px;
+  }
+
 }
 
 

@@ -30,7 +30,7 @@ function App() {
   return (
     <>
     <div className='overlay'>
-      <h1>Convert from USD to: </h1>
+      <h1 className='prompt'>Convert from USD to: </h1>
       <Form>
           <Input 
           type='select'
@@ -41,10 +41,10 @@ function App() {
             <option>4</option>
           </Input>
       </Form>
-      <Button>Convert</Button>
+      <Button color='primary' size='normal' outline>Convert</Button>
     </div>
     </>
   )
 }
 
-export default App
+export default App;
