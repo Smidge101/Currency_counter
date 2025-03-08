@@ -1,7 +1,7 @@
 from django.http import HttpResponse, JsonResponse
 import requests 
-import Constants
-import manual
+from . import Constants
+from . import manual
 import sqlite3
 import aiohttp
 from django.views import View
