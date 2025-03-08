@@ -1,38 +1,18 @@
 #include <iostream>
-#include "Bank.h"
+#include "Bank.hpp"
 
-double USDToPesos(double userUSD){
+// double USDToPesos(double userUSD){
 
-	double pesos = 20.26;
+// 	double pesos = 20.26;
 	
-	double total = userUSD * pesos;
+// 	double total = userUSD * pesos;
 
-	return total;
+// 	return total;
 
 	
-}
-
-double USDToEuros(double userUSD){
-
-	//exchange rate 
-
-	double euros = 1.08;
-
-	double total = userUSD / euros;;
-
-	return total;
-
-}
+// }
 
 
-double USDToYen(double userUSD){
-
-	double yen = 148.015;
-	
-	double total = userUSD * yen;
-
-	return total;
-}
 
 
 int main(){

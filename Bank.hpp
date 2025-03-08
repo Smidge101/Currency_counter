@@ -1,6 +1,14 @@
 //WHYYYYYYYYYY
 
+#pragma once
 
-private:
+class CurrencyConverter {
+    public: 
+        double USDToPesos(double userUSD);
 
-public: 
+        double USDToEuros(double userUSD);
+
+        double USDToYen(double userUSD);
+    
+    // private:
+};

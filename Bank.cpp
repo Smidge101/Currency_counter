@@ -9,4 +9,26 @@ double USDToPesos(double userUSD){
 	
 }
 
+double USDToEuros(double userUSD){
+
+	//exchange rate 
+
+	double euros = 1.08;
+
+	double total = userUSD / euros;;
+
+	return total;
+
+}
+
+
+double USDToYen(double userUSD){
+
+	double yen = 148.015;
+	
+	double total = userUSD * yen;
+
+	return total;
+}
+
 
