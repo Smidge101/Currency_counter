@@ -1,23 +1,23 @@
 import React, { useState } from 'react'
-import Navigation from './NavBar'
 import './App.css'
-import { FormGroup } from 'reactstrap';
+import { FormGroup, Button, Form, Input } from 'reactstrap';
 
 function App() {
   const [ rates, setRates ] = useState({});
-  useEffect(() => {
-    const currencyFetch = async () => {
-      try {
-        const response = await fetch("http://127.0.0.1:8000/currencyRate/");
-          const data =  await response.json();
-          setRates(data);
-          console.log(data);
-      } catch (error) {
-        console.error('Error fetching rates', error);
-      }
-    }
-    currencyFetch
-  }, []);
+  const [ selection, setSelection ] = useState(0);
+  // useEffect(() => {
+  //   const currencyFetch = async () => {
+  //     try {
+  //       const response = await fetch("http://127.0.0.1:8000/currencyRate/");
+  //         const data =  await response.json();
+  //         setRates(data);
+  //         console.log(data);
+  //     } catch (error) {
+  //       console.error('Error fetching rates', error);
+  //     }
+  //   }
+  //   currencyFetch
+  // }, []);
   // const handleSubmit = async (event) => {
   //   event.preventDefault();
   //   //TODO FILL WITH PAYLOAD OF BACKEND
@@ -29,25 +29,18 @@ function App() {
 
   return (
     <>
-      <Navigation />
-      {console.log(rates)}
-      <Button onClick={currencyFetch}></Button>
       <h1>Placeholder yall hehe</h1>
-      <Form 
-      // onSubmit={handleSubmit}
-      >
-        <FormGroup>
+      <Form>
           <Input 
-            type='select'
-            name='currencytype'
-            // onChange={handleChange}
+          type='select'
           >
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
           </Input>
-        </FormGroup>
 
       </Form>
-
-
 
 
     </>
