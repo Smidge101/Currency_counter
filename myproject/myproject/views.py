@@ -31,7 +31,7 @@ class CurrencyRateView(View):
             async with aiohttp.ClientSession() as session:
                 async with session.get(url) as response:
                     data = await response.json()
-                    rates = data.get("rates", {})
+                    rates = data.get("conversion_rates", {})
                     return JsonResponse(rates)
         except aiohttp.ClientError as e:
             return JsonResponse({"error": str(e)}, status = 500)
