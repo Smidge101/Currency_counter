@@ -1,4 +1,6 @@
-double USDToPesos(double userUSD){
+#include "Bank.hpp"
+
+double CurrencyConverter::USDToPesos(double userUSD){
 
 	double pesos = 20.26;
 	
@@ -9,7 +11,7 @@ double USDToPesos(double userUSD){
 	
 }
 
-double USDToEuros(double userUSD){
+double CurrencyConverter::USDToEuros(double userUSD){
 
 	//exchange rate 
 
@@ -22,7 +24,7 @@ double USDToEuros(double userUSD){
 }
 
 
-double USDToYen(double userUSD){
+double CurrencyConverter::USDToYen(double userUSD){
 
 	double yen = 148.015;
 	

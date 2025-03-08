@@ -22,15 +22,17 @@ int main(){
     double newEuros;
     double newYen;
 
+	CurrencyConverter convert;
+
     std::cout << "How much money: ";
 
 	std::cin >> userUSD;
 
-	newPesos = USDToPesos(userUSD);
+	newPesos = convert.USDToPesos(userUSD);
 
-    newEuros = USDToEuros(userUSD);
+    newEuros = convert.USDToEuros(userUSD);
 
-    newYen = USDToYen(userUSD); 
+    newYen = convert.USDToYen(userUSD); 
 
     std::cout << newYen << std::endl;
     std::cout << newEuros << std::endl;
