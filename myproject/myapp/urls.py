@@ -21,7 +21,7 @@ from . import views
 app_name = 'myapp'
 
 urlpatterns = [
-    path('', views.home),
-    # path('currencyRate/', views.getExchangeRates),
+    path('', views.getExchangeRates),
+    path('convert/', views.convert_currency)
 ]
  
