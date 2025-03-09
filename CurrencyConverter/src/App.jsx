@@ -33,7 +33,7 @@ function App() {
     console.log(usd)
 
     try {
-      const response = await fetch('http://127.0.0.1/currency/convert/', {
+      const response = await fetch('http://127.0.0.1:8000/currency/convert/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
