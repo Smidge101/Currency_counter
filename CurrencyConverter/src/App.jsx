@@ -4,7 +4,7 @@ import { FormGroup, Button, Form, Input } from 'reactstrap';
 
 function App() {
   const [ rates, setRates ] = useState({});
-  const [ selection, setSelection ] = useState("");
+  const [ selection, setSelection ] = useState('');
   const [ usd, setUSD ] = useState(0.0);
   const [ convertedAmount, setConvertedAmount ] = useState(0.0);
   const [ error, setError ] = useState("");
