@@ -25,11 +25,15 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(selection == ''){
+      setConvertedAmount(parseFloat(usd).toFixed(2));
+      return;
+    }
     const data = {
-      usd: Number(usd),
+      usd: parseFloat(usd),
       selection: selection
     };
-    console.log(selection);
+    console.log("SELECTION: ",selection);
     console.log(usd)
 
     try {
@@ -43,7 +47,7 @@ function App() {
       const result = await response.json();
   
       if(response.ok) {
-        setConvertedAmount(result.converted_amount);
+        setConvertedAmount(result.converted_amount.toFixed(2));
         setError('');
       } else {
         setError('Conversion failed');
