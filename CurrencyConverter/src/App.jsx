@@ -34,16 +34,20 @@ function App() {
     <div className='overlay'>
       <h1 className='prompt'>Convert </h1>
       <Form>
-        <Input>
-        </Input>
-          <Input 
-          type='select'
-          >
-            {Object.entries(rates).map(([key,value], index) => (
-             <option key={index} value={key}>
-              {key}
-            </option>))}
+        <FormGroup>
+          <Input>
           </Input>
+        </FormGroup>
+        <FormGroup>
+            <Input 
+            type='select'
+            >
+              {Object.entries(rates).map(([key,value], index) => (
+              <option key={index} value={key}>
+                {key}
+              </option>))}
+            </Input>
+          </FormGroup>
       </Form>
       <Button color='primary' size='normal' outline>Convert</Button>
     </div>
