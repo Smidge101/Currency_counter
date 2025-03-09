@@ -56,8 +56,6 @@ body {
 
 @media only screen and (max-width: 600px) {
   .overlay {
-    width: 400px;
-    padding: 0 50px;
 
   }
 

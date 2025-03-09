@@ -5,6 +5,7 @@ import { FormGroup, Button, Form, Input } from 'reactstrap';
 function App() {
   const [ rates, setRates ] = useState({});
   const [ selection, setSelection ] = useState(0);
+  const [ usd, setUSD ] = useState(0);
   useEffect(() => {
     const currencyFetch = async () => {
       try {
@@ -18,21 +19,23 @@ function App() {
     }
     currencyFetch()
   }, []);
+  // const handleChange = (event) => {
+  //   //TODO FILL WITH ITEMS TO CHANGE AND VALUES CHANGED
+  // }
+
   // const handleSubmit = async (event) => {
   //   event.preventDefault();
   //   //TODO FILL WITH PAYLOAD OF BACKEND
-  // }
-
-  // const handleChange = (event) => {
-  //   //TODO FILL WITH ITEMS TO CHANGE AND VALUES CHANGED
   // }
 
   return (
     <>
     {console.log(JSON.stringify(rates, null, 2))}
     <div className='overlay'>
-      <h1 className='prompt'>Convert from USD to: </h1>
+      <h1 className='prompt'>Convert </h1>
       <Form>
+        <Input>
+        </Input>
           <Input 
           type='select'
           >
