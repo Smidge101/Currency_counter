@@ -22,6 +22,6 @@ app_name = 'myapp'
 
 urlpatterns = [
     path('', views.home),
-    # path('currencyRate/', views.getExchangeRates),
+    path('currencyRate/', views.getExchangeRates),
 ]
  
