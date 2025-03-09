@@ -25,27 +25,28 @@ def home(request):
     return None
 
 def getExchangeRates(request):
-    service_key = Constants.API_KEY_SERVICE
-    #  Making request
+    service_key = Constants.API_KEY_SERVICE  # Your API key from settings
     url = f"https://v6.exchangerate-api.com/v6/{service_key}/latest/USD"
 
-    #  making request
     try:
+        # Make the HTTP request to the API
         response = requests.get(url)
-        data = response.json()
-        logger.debug()
-        rates = data.get("conversion_rates", {})
-        
+        response.raise_for_status()  # This will raise an error for any bad HTTP status
 
+        data = response.json()
+        rates = data.get("conversion_rates", {})
+
+        # Insert each exchange rate into the database using Django ORM
         for currency_code, exchange_rate in rates.items():
             Currency.objects.get_or_create(
-
-                code = currency_code,
-
-                defaults={'name': currency_code, 'exchange_rate': exchange_rate}
+                name=currency_code,  # Use 'name' instead of 'code'
+                defaults={'name': currency_code, 'rate': exchange_rate}
             )
-       # return HttpResponse("Data successfully inserted into the database!")
-        return JsonResponse(rates, safe=False) 
-    except request.exceptions.RequestException as e:
+
+        # Return the exchange rates as a JSON response
+        return JsonResponse(rates, safe=False)
+
+    except requests.exceptions.RequestException as e:  # Fix: Use 'requests' instead of 'request'
+        # Handle request exceptions like network issues or bad status codes
+        logger.error(f"Error fetching exchange rates: {e}")
         return JsonResponse({"error": "Failed to fetch data", "details": str(e)})
-    

@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const currencyFetch = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/currencyRate/");
+        const response = await fetch("http://127.0.0.1:8000/currency/currencyRate");
           const data =  await response.json();
           setRates(data);
           console.log(data);
